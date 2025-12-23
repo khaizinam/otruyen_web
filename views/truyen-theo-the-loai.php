@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 session_start();
 
 // Lấy slug thể loại từ URL và các tham số lọc
@@ -144,10 +144,10 @@ function getAllViews($slugs) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, đọc truyện miễn phí, TRUYENTRANHNET">
-    <meta name="description" content="Đọc truyện tranh miễn phí tại TRUYENTRANHNET theo thể loại <?= htmlspecialchars($categoryName) ?>.">
-    <meta property="og:title" content="TRUYENTRANHNET - Thể Loại <?= htmlspecialchars($categoryName) ?>">
-    <meta property="og:description" content="Khám phá truyện tranh theo thể loại <?= htmlspecialchars($categoryName) ?> tại TRUYENTRANHNET.">
+    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, đọc truyện miễn phí, MANGA18K">
+    <meta name="description" content="Đọc truyện tranh miễn phí tại MANGA18K theo thể loại <?= htmlspecialchars($categoryName) ?>.">
+    <meta property="og:title" content="MANGA18K - Thể Loại <?= htmlspecialchars($categoryName) ?>">
+    <meta property="og:description" content="Khám phá truyện tranh theo thể loại <?= htmlspecialchars($categoryName) ?> tại MANGA18K.">
     <meta property="og:image" content="https://www.truyentranhnet.com/img/logo.png">
     <meta property="og:url" content="https://www.truyentranhnet.com/the-loai/<?= htmlspecialchars($categorySlug) ?>">
     <meta name="robots" content="index, follow">
@@ -179,7 +179,7 @@ function getAllViews($slugs) {
         <h4 class="text-2xl font-semibold mb-6 text-center">THỂ LOẠI: <?= htmlspecialchars($categoryName) ?></h4>
 
         <!-- Form lọc -->
-        <form method="GET" action="/TruyenTranhNet/views/truyen-theo-the-loai.php" class="filter-form mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <form method="GET" action="/views/truyen-theo-the-loai.php" class="filter-form mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
             <input type="hidden" name="slug" value="<?= htmlspecialchars($categorySlug) ?>">
             <div>
                 <label for="status" class="block text-sm font-medium mb-1">Tình trạng</label>
@@ -206,7 +206,7 @@ function getAllViews($slugs) {
             <?php if (!empty($truyenList)): ?>
                 <?php foreach ($truyenList as $truyen): ?>
                     <div class="bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                        <a href="/TruyenTranhNet/views/truyen-tranh/<?= urlencode($truyen['slug']) ?>" class="relative block">
+                        <a href="/views/truyen-tranh/<?= urlencode($truyen['slug']) ?>" class="relative block">
                             <img src="https://img.otruyenapi.com/uploads/comics/<?= htmlspecialchars($truyen['thumb_url']) ?>" 
                                  class="w-full object-cover transition-transform duration-300 group-hover:scale-105" 
                                  alt="<?= htmlspecialchars($truyen['name']) ?>" 
@@ -226,7 +226,7 @@ function getAllViews($slugs) {
                         </a>
                         <div class="p-2">
                             <h5 class="text-base font-semibold truncate text-white mb-1 text-center">
-                                <a href="/TruyenTranhNet/views/truyen-tranh/<?= urlencode($truyen['slug']) ?>" class="hover:text-green-500 transition-colors duration-200"><?= htmlspecialchars($truyen['name']) ?></a>
+                                <a href="/views/truyen-tranh/<?= urlencode($truyen['slug']) ?>" class="hover:text-green-500 transition-colors duration-200"><?= htmlspecialchars($truyen['name']) ?></a>
                             </h5>
                             <div class="flex justify-between items-center text-base text-gray-300 mb-1">
                                 <span><i class="fas fa-bookmark mr-1 text-green-500"></i> <?= htmlspecialchars($truyen['chaptersLatest'][0]['chapter_name'] ?? 'Chưa có') ?></span>

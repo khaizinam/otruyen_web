@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../config/database.php');
+include('../config/init.php');
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['user'])) {

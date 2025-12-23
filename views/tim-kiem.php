@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 session_start();
 
 // Lấy tham số từ URL
@@ -88,15 +88,15 @@ if (!empty($keyword)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, tìm kiếm truyện, TRUYENTRANHNET">
-    <meta name="description" content="Tìm kiếm truyện tranh miễn phí tại TRUYENTRANHNET. Khám phá manga, manhwa, manhua yêu thích.">
-    <meta property="og:title" content="TRUYENTRANHNET - Tìm Kiếm Truyện">
-    <meta property="og:description" content="Tìm kiếm và đọc truyện tranh miễn phí tại TRUYENTRANHNET.">
+    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, tìm kiếm truyện, MANGA18K">
+    <meta name="description" content="Tìm kiếm truyện tranh miễn phí tại MANGA18K. Khám phá manga, manhwa, manhua yêu thích.">
+    <meta property="og:title" content="MANGA18K - Tìm Kiếm Truyện">
+    <meta property="og:description" content="Tìm kiếm và đọc truyện tranh miễn phí tại MANGA18K.">
     <meta property="og:image" content="https://www.truyentranhnet.com/img/logo.png">
     <meta property="og:url" content="https://www.truyentranhnet.com/tim-kiem.php">
     <meta name="robots" content="index, follow">
     <link href="../img/logo.png" rel="icon">
-    <title>TRUYENTRANHNET - Tìm Kiếm Truyện</title>
+    <title>MANGA18K - Tìm Kiếm Truyện</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

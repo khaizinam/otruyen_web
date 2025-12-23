@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 $type = 'sap-ra-mat';
 $page = max(1, (int)($_GET['page'] ?? 1)); // Đảm bảo page không nhỏ hơn 1
 session_start();
@@ -76,15 +76,15 @@ function getViews($slug) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, đọc truyện miễn phí, TRUYENTRANHNET">
-    <meta name="description" content="Danh sách truyện tranh sắp ra mắt tại TRUYENTRANHNET. Đọc manga, manhwa, manhua miễn phí.">
-    <meta property="og:title" content="TRUYENTRANHNET - Danh Sách Truyện Sắp Ra Mắt">
-    <meta property="og:description" content="Danh sách truyện tranh sắp ra mắt tại TRUYENTRANHNET. Đọc manga, manhwa, manhua miễn phí.">
+    <meta name="keywords" content="truyện tranh, manga, manhwa, manhua, đọc truyện miễn phí, MANGA18K">
+    <meta name="description" content="Danh sách truyện tranh sắp ra mắt tại MANGA18K. Đọc manga, manhwa, manhua miễn phí.">
+    <meta property="og:title" content="MANGA18K - Danh Sách Truyện Sắp Ra Mắt">
+    <meta property="og:description" content="Danh sách truyện tranh sắp ra mắt tại MANGA18K. Đọc manga, manhwa, manhua miễn phí.">
     <meta property="og:image" content="https://www.truyentranhnet.com/img/logo.png">
     <meta property="og:url" content="https://www.truyentranhnet.com/sap-ra-mat">
     <meta name="robots" content="index, follow">
     <link href="../img/logo.png" rel="icon">
-    <title>TRUYENTRANHNET - Danh Sách Truyện Sắp Ra Mắt</title>
+    <title>MANGA18K - Danh Sách Truyện Sắp Ra Mắt</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

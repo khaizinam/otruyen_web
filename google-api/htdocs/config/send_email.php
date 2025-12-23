@@ -93,7 +93,7 @@ function send_otp_email($email, $otp) {
         $mail->Password = 'juuf bzoq eysl zdag'; 
         $mail->SMTPSecure = 'ssl';
         $mail->Port=465;
-        $mail->setFrom('truyentranhnetcontact@gmail.com', 'TRUYENTRANHNET');
+        $mail->setFrom('truyentranhnetcontact@gmail.com', 'MANGA18K');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'XÁC THỰC TÀI KHOẢN';
@@ -158,7 +158,7 @@ function send_password_reset_email($email, $token) {
         $mail->Password = 'juuf bzoq eysl zdag'; 
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
-        $mail->setFrom('truyentranhnetcontact@gmail.com', 'TRUYENTRANHNET');
+        $mail->setFrom('truyentranhnetcontact@gmail.com', 'MANGA18K');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Đặt Lại Mật Khẩu';
@@ -179,7 +179,7 @@ function send_password_reset_email($email, $token) {
                 </div>
                 <div class='footer'>
                     <p>Trân trọng,</p>
-                    <p>TRUYENTRANHNET</p>
+                    <p>MANGA18K</p>
                 </div>
             </body>
             </html>

@@ -1,11 +1,5 @@
 <?php
-$servername = "127.0.0.1:3306"; 
-$username = "root"; 
-$password = "secret";
-$dbname = "dev_otruyen";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+$conn = new mysqli(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }

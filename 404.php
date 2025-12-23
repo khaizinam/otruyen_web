@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 session_start();
 ?>
 
@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../img/logo.png" rel="icon">
-    <title>404 - Không Tìm Thấy Trang - TRUYENTRANHNET</title>
+    <title>404 - Không Tìm Thấy Trang - MANGA18K</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -30,7 +30,7 @@ session_start();
 
     <?php include '../includes/footer.php'; ?>
 
-    <a href="../index.php" class="fixed bottom-6 right-6 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-200 transition duration-300 z-50">
+    <a href="/" class="fixed bottom-6 right-6 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-200 transition duration-300 z-50">
         <i class="uil uil-estate text-blue-600 text-xl"></i>
     </a>
 

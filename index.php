@@ -1,5 +1,5 @@
 <?php
-include('config/database.php');
+include('config/init.php');
 session_start();
 
 function checkDDoSProtection() {

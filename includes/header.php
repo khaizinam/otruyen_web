@@ -28,9 +28,9 @@ $categories = (isset($data['data']) && !empty($data['data']['items']))
 <header class="bg-gray-900 fixed w-full top-0 z-50 shadow-lg py-3" x-data="{ menuOpen: false, categoryOpen: false }">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <!-- Logo -->
-        <a href="<?= $base_url ?>/index.php" class="flex items-center space-x-2 group no-underline">
+        <a href="<?= BASE_URL ?>" class="flex items-center space-x-2 group no-underline">
             <i class="fas fa-book-open text-green-500 text-2xl transition-transform group-hover:scale-110 duration-300"></i>
-            <span class="text-xl font-bold text-white group-hover:text-green-500 transition-colors duration-300">TRUYENTRANHNET</span>
+            <span class="text-xl font-bold text-white group-hover:text-green-500 transition-colors duration-300">MANGA18K</span>
         </a>
 
         <!-- Hamburger Button -->

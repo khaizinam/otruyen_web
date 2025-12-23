@@ -2,6 +2,7 @@
 require __DIR__ .'/../PHPMailer/src/PHPMailer.php';
 require __DIR__ .'/../PHPMailer/src/SMTP.php';
 require __DIR__ .'/../PHPMailer/src/Exception.php';
+include __DIR__ .'/init.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -93,7 +94,7 @@ function send_otp_email($email, $otp) {
         $mail->Password = 'jguf bfoq fedd rdwd'; 
         $mail->SMTPSecure = 'ssl';
         $mail->Port=465;
-        $mail->setFrom('truyentranhnetcontact@gmail.com', 'TRUYENTRANHNET');
+        $mail->setFrom('truyentranhnetcontact@gmail.com', 'MANGA18K');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'XÁC THỰC TÀI KHOẢN';
@@ -118,11 +119,11 @@ function send_password_reset_email($email, $token) {
         $mail->Password = 'juuf bzoq eysl zdag'; 
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
-        $mail->setFrom('truyentranhnetcontact@gmail.com', 'TRUYENTRANHNET');
+        $mail->setFrom('truyentranhnetcontact@gmail.com', 'MANGA18K');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Đặt Lại Mật Khẩu';
-        $resetLink = "http://localhost/TruyenTranhNet/views/reset_password.php?token=" . $token;
+        $resetLink = BASE_URL . "/views/reset_password.php?token=" . $token;
         $mail->Body = "
             <html>
             <head>
@@ -139,7 +140,7 @@ function send_password_reset_email($email, $token) {
                 </div>
                 <div class='footer'>
                     <p>Trân trọng,</p>
-                    <p>TRUYENTRANHNET</p>
+                    <p>MANGA18K</p>
                 </div>
             </body>
             </html>

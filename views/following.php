@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

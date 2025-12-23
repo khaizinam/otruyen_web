@@ -78,7 +78,7 @@ function curlSafeRequest($url) {
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'TRUYENTRANHNET/1.0');
+    curl_setopt($ch, CURLOPT_USERAGENT, 'MANGA18K/1.0');
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false); // Ngăn chặn redirect độc hại
     curl_setopt($ch, CURLOPT_MAXREDIRS, 0); // Giới hạn số lần redirect
     $response = curl_exec($ch);

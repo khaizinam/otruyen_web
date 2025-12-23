@@ -42,7 +42,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF
             <!-- Phần logo và thương hiệu -->
             <div class="footer-section bg-gray-700 p-5 rounded-lg shadow-lg border border-gray-600 hover:-translate-y-1 hover:shadow-xl transition">
                 <a href="<?= $base_url; ?>" class="footer-logo">
-                    <span class="logo-text text-3xl font-bold text-blue-500 uppercase tracking-wide hover:text-blue-400 transition">TRUYENTRANHNET</span>
+                    <span class="logo-text text-3xl font-bold text-blue-500 uppercase tracking-wide hover:text-blue-400 transition">MANGA18K</span>
                 </a>
                 <p class="footer-slogan text-gray-300 text-sm mt-2">Kho truyện tranh miễn phí cập nhật 24/7</p>
             </div>
@@ -58,7 +58,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF
             <!-- Phần thông tin và lượt truy cập -->
             <div class="footer-section bg-gray-700 p-5 rounded-lg shadow-lg border border-gray-600 hover:-translate-y-1 hover:shadow-xl transition">
                 <h5 class="section-title text-blue-500 text-lg uppercase tracking-wide mb-3">Thông Tin</h5>
-                <p class="footer-info text-gray-300 text-sm mb-2">© 2024 TRUYENTRANHNET</p>
+                <p class="footer-info text-gray-300 text-sm mb-2">© 2024 MANGA18K</p>
                 <p class="footer-visits text-gray-300 text-sm mb-2"><i class="fas fa-eye mr-1"></i> Lượt truy cập: <span class="visit-count font-semibold text-blue-400"><?= number_format($visitCount); ?></span></p>
                 <p class="footer-active-users text-gray-300 text-sm"><i class="fas fa-users mr-1"></i> Người đang truy cập: <span class="active-count font-semibold text-blue-400"><?= number_format($activeUserCount); ?></span></p>
             </div>

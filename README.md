@@ -48,12 +48,12 @@ TruyenTranhNet là một website đọc truyện tranh trực tuyến miễn ph�
 ## 💻 Cài đặt và sử dụng
 1. Clone repo về máy:
    ```sh
-   git clone https://github.com/tophvn/TruyenTranhNet.git
+   git clone https://github.com/tophvn.git
    cd TruyenTranhNet
    ```
-2. Cấu hình config/database.php để kết nối database.
+2. Cấu hình config/init.php để kết nối database.
 3. Chạy project trên local server (Laragon, XAMPP...)
-4. Mở trình duyệt và truy cập `http://localhost/TruyenTranhNet`
+4. Mở trình duyệt và truy cập `http://localhost`
 
 ## 📜 Giấy phép
 Dự án này được phát triển phục vụ mục đích học tập và tham khảo. Nếu bạn sử dụng lại mã nguồn, vui lòng ghi nguồn đầy đủ.

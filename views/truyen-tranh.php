@@ -1,5 +1,5 @@
 <?php
-include('../config/database.php');
+include('../config/init.php');
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -678,7 +678,7 @@ if ($homeData && isset($homeData['data']['items'])) {
         
         const chapterInfo = {
             filename: `${storySlug}-${chapterName}`,
-            chapter_link: `/TruyenTranhNet/views/doc-truyen.php?chapter_url=${encodeURIComponent(chapterUrl)}&story_slug=${encodeURIComponent(storySlug)}`,
+            chapter_link: `/views/doc-truyen.php?chapter_url=${encodeURIComponent(chapterUrl)}&story_slug=${encodeURIComponent(storySlug)}`,
             chapter_story_name: "<?php echo htmlspecialchars($comicData['name']); ?>",
             chapter_name: `Chương ${chapterName}`,
             chapter_image: `https://img.otruyenapi.com/uploads/comics/<?php echo htmlspecialchars($comicData['thumb_url']); ?>`,
@@ -741,7 +741,7 @@ if ($homeData && isset($homeData['data']['items'])) {
             let chapterName = $(this).find('.chapter-name').text().replace('Chương ', '').trim();
             
             saveToReadHistory(encodedChapterUrl, storySlug, chapterName);
-            window.location.href = `/TruyenTranhNet/views/doc-truyen.php?chapter_url=${encodedChapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
+            window.location.href = `/views/doc-truyen.php?chapter_url=${encodedChapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
         });
 
         $('#readFirstChapter').on('click', function() {
@@ -750,7 +750,7 @@ if ($homeData && isset($homeData['data']['items'])) {
             let chapterName = chapters[0].name;
             
             saveToReadHistory(chapterUrl, storySlug, chapterName);
-            window.location.href = `/TruyenTranhNet/views/doc-truyen.php?chapter_url=${chapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
+            window.location.href = `/views/doc-truyen.php?chapter_url=${chapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
         });
 
         $('#readLatestChapter').on('click', function() {
@@ -759,7 +759,7 @@ if ($homeData && isset($homeData['data']['items'])) {
             let chapterName = chapters[chapters.length - 1].name;
             
             saveToReadHistory(chapterUrl, storySlug, chapterName);
-            window.location.href = `/TruyenTranhNet/views/doc-truyen.php?chapter_url=${chapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
+            window.location.href = `/views/doc-truyen.php?chapter_url=${chapterUrl}&story_slug=${encodeURIComponent(storySlug)}`;
         });
 
         $('#addToFollowing').on('click', function() {

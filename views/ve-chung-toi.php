@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../img/logo.png" rel="icon">
-    <title>Về Chúng Tôi - TRUYENTRANHNET</title>
+    <title>Về Chúng Tôi - MANGA18K</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -30,7 +30,7 @@
 
             <div class="text-center mb-6">
                 <img src="../img/logo.jpg" alt="Team Truyentranhnet" class="w-48 h-48 rounded-full border-4 border-red-600 mx-auto">
-                <h3 class="text-2xl font-semibold mt-4 animate-color">TRUYENTRANHNET</h3>
+                <h3 class="text-2xl font-semibold mt-4 animate-color">MANGA18K</h3>
                 <p class="text-gray-300 mt-2">Chúng tôi luôn sẵn sàng kết nối với cộng đồng qua các nền tảng mạng xã hội.</p>
                 <a href="https://www.facebook.com/tophvn/" class="inline-block bg-blue-600 text-white py-2 px-4 mt-4 rounded-lg hover:bg-blue-700 transition duration-300" target="_blank">Fanpage Facebook</a>
             </div>

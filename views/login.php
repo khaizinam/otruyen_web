@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../config/database.php'); 
+include('../config/init.php'); 
 require_once '../google-api/vendor/autoload.php';
 include('../config/send_email.php');
 
@@ -57,7 +57,7 @@ if (isset($_GET['code'])) {
         ];
 
         error_log("Login with Google successful, user_id: " . $_SESSION['user']['user_id']);
-        header("Location: ../index.php");
+        header("Location: /");
         exit();
     } else {
         $errors[] = 'Đăng nhập Google thất bại!';
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'avatar' => $user['avatar'],
                 ];
                 error_log("Login with form successful, user_id: " . $_SESSION['user']['user_id']);
-                header("Location: ../index.php");
+                header("Location: /");
                 exit();
             } else {
                 $errors[] = 'Sai mật khẩu!';
@@ -119,7 +119,7 @@ $googleLoginUrl = $client->createAuthUrl();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../img/logo.png" rel="icon">
-    <title>Đăng Nhập - TRUYENTRANHNET</title>
+    <title>Đăng Nhập - MANGA18K</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -185,7 +185,7 @@ $googleLoginUrl = $client->createAuthUrl();
 
     <?php include('../includes/footer.php'); ?>
 
-    <a href="../index.php" class="fixed bottom-6 right-6 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-200 transition duration-300 z-50">
+    <a href="/" class="fixed bottom-6 right-6 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-200 transition duration-300 z-50">
         <i class="uil uil-estate text-blue-600 text-xl"></i>
     </a>
 
