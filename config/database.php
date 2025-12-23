@@ -1,6 +1,5 @@
 <?php
-// Cấu hình database cho Docker
-$servername = "mysql:3306"; 
+$servername = "127.0.0.1:3306"; 
 $username = "root"; 
 $password = "secret";
 $dbname = "dev_otruyen";
@@ -11,4 +10,3 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 ?>
-
