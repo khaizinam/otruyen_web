@@ -5,7 +5,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/views';
 // Xác định base_url động
-$base_url = dirname($_SERVER['SCRIPT_NAME'], substr_count($_SERVER['SCRIPT_NAME'], '/') - 1);
+$levels = max(1, substr_count($_SERVER['SCRIPT_NAME'], '/') - 1);
+$base_url = dirname($_SERVER['SCRIPT_NAME'], $levels);
 
 $api_url = "https://otruyenapi.com/v1/api/the-loai";
 

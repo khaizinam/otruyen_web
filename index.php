@@ -152,21 +152,29 @@ function getMostViewedTruyen($period = 'total', $limit = 9) {
             $topTruyen[] = $row;
         }
     } elseif ($period === 'week') {
-        // Lấy tổng lượt xem trong 7 ngày qua
-        $query = "SELECT t.slug, t.name, t.thumb_url, t.updated_at, t.views, 
-                         COALESCE(SUM(vl.views), t.daily_views) AS weekly_views 
-                  FROM truyen t 
-                  LEFT JOIN view_logs vl ON t.slug = vl.truyen_slug 
-                  WHERE vl.view_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) 
-                  GROUP BY t.slug, t.name, t.thumb_url, t.updated_at, t.views 
-                  ORDER BY weekly_views DESC 
-                  LIMIT $limit";
-        $result = $conn->query($query);
-        while ($row = $result->fetch_assoc()) {
-            $topTruyen[] = $row;
+        // Kiểm tra xem bảng view_logs có tồn tại không
+        $tableCheck = $conn->query("SHOW TABLES LIKE 'view_logs'");
+        $viewLogsExists = $tableCheck && $tableCheck->num_rows > 0;
+        
+        if ($viewLogsExists) {
+            // Lấy tổng lượt xem trong 7 ngày qua từ view_logs
+            $query = "SELECT t.slug, t.name, t.thumb_url, t.updated_at, t.views, 
+                             COALESCE(SUM(vl.views), t.daily_views) AS weekly_views 
+                      FROM truyen t 
+                      LEFT JOIN view_logs vl ON t.slug = vl.truyen_slug 
+                      WHERE vl.view_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) 
+                      GROUP BY t.slug, t.name, t.thumb_url, t.updated_at, t.views 
+                      ORDER BY weekly_views DESC 
+                      LIMIT $limit";
+            $result = $conn->query($query);
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $topTruyen[] = $row;
+                }
+            }
         }
         
-        // Nếu không đủ dữ liệu từ view_logs, bổ sung từ views tổng
+        // Nếu không có view_logs hoặc không đủ dữ liệu, bổ sung từ views tổng
         if (count($topTruyen) < $limit) {
             $remaining = $limit - count($topTruyen);
             $excludeSlugs = array_column($topTruyen, 'slug');
